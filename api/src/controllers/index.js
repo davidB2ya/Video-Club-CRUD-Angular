@@ -24,13 +24,13 @@ export const saveMovie = async (req, res) => {
     const [results] = await connection.query(
         "INSERT INTO movie(mov_id, mov_title, mov_year, mov_time, mov_lang, mov_dt_rel, mov_rel_country) VALUES(?, ?, ?, ?, ?, ?, ?)",
         [
-        req.body.id,
-        req.body.title, 
-        req.body.year,
-        req.body.time,
-        req.body.lang, 
-        req.body.rel,
-        req.body.country,
+        req.body.mov_id,
+        req.body.mov_title, 
+        req.body.mov_year,
+        req.body.mov_time,
+        req.body.mov_lang, 
+        req.body.mov_dt_rel,
+        req.body.mov_rel_country,
 
     ])
     // console.log(results);

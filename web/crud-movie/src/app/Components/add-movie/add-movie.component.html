@@ -1,0 +1,42 @@
+<div class="container">
+    <h4>Agregar Película</h4>
+    <div class="row">
+        <div class="col-sm-6">
+            <form>
+                <div class="form-floating mb-3">
+                    <input [(ngModel)]="movie.mov_title" type="text" class="form-control" name="title" placeholder="Título de la Película">
+                    <label for="floatingInput">Título de la Película</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input [(ngModel)]="movie.mov_year" type="text" class="form-control" name="year" placeholder="Año">
+                    <label for="floatingInput">Año</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input [(ngModel)]="movie.mov_time" type="text" class="form-control" name="time" placeholder="Duración">                    
+                    <label for="floatingInput">Duración</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input [(ngModel)]="movie.mov_lang" type="text" class="form-control" name="language" placeholder="Idioma">
+                    <label for="floatingInput">Idioma</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input [(ngModel)]="movie.mov_dt_rel" type="date" class="form-control" name="date" placeholder="Fecha de Estreno">
+                    <label for="floatingInput">Fecha de Estreno</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input [(ngModel)]="movie.mov_rel_country" type="text" class="form-control" name="country" placeholder="País">
+                    <label for="floatingInput">País</label>
+                </div>
+
+                <button (click)="add()" class="btn btn-success">Agregar</button>
+            </form>
+    
+        </div>
+    </div>
+   
+</div>

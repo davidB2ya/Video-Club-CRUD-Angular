@@ -1,6 +1,8 @@
 <nav class="navbar navbar-expand navbar-light bg-light">
     <div class="nav navbar-nav">
-        <a class="nav-item nav-link active" href="#">Inicio<span class="visually-hidden">(current)</span></a>
-        <a class="nav-item nav-link" href="#">Lista de Películas</a>
+        <a class="nav-item nav-link active" routerLink="/">Inicio<span class="visually-hidden">(current)</span></a>
+        <a class="nav-item nav-link" routerLink="/add" routerLinkActive="router-link-active" >Agregar</a>
     </div>
 </nav>
+
+<router-outlet></router-outlet>
