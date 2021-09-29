@@ -9,20 +9,23 @@ import morgan from 'morgan';
 //INIT EXPRESS
 const app = express();
 
-
 //CONFIG
 const port = (process.env.PORT || 3004);
 
+//Direction
+app.use( express.static('public'))
 
 //MIDDLEWARE
 app.use(express.json())
 app.use(morgan('dev'));
 app.use(allRoutes);
 
-
-
 //PORT
 app.set('port', port);
+app.get( '*', (req, res) => {
+    res.sendFile( path.resolve(__dirname, 'public/index.html'))
+});
+
 
 
 //EXPRESS

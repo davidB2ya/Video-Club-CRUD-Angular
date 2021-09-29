@@ -46,5 +46,6 @@ export class ModifyMovieComponent implements OnInit {
       err=>console.log(err)
     );
     this.router.navigate(['/home']);
+    this.MovieService.getMovies().subscribe();
   }
 }
